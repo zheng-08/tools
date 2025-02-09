@@ -66,8 +66,16 @@
           margin-top: 30px;
         }
         .headctr {
-          position: sticky;
+          position: fixed;
         }
+        .mtop {
+          margin-top: 550px;
+        }
+        .left {
+          margin-right: 0;
+        }
+      }
+      @media screen and (max-height: 800px) {
         .mtop {
           margin-top: 800px;
         }
@@ -99,7 +107,7 @@
       <!-- container -->
       <div style="margin-top: 200px; padding: 20px" class="flex container">
         <!-- left -->
-        <div class="flex column mr20">
+        <div class="flex column mr20 left">
           <!-- box -->
           <div class="box gray flex center column mtop">
             <a href="https://www.midorg.com/h.html">
