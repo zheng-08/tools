@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tools3.0</title>
+    <title>tools 3.1</title>
     <link rel="Shortcut Icon" href="https://i.ibb.co/h14pYQgp/logo09.webp" />
-    <meta name="description" content="tools3.0" />
+    <meta
+      name="description"
+      content="tools3.0 anfeng re01 csdn chatgpt deepseek imgbb qwen"
+    />
     <meta
       name="keywords"
       content="anfeng re01 csdn chatgpt deepseek imgbb qwen"
@@ -17,16 +20,13 @@
         height: 100vh;
         background-image: linear-gradient(
           to bottom right,
-          rgb(247, 0, 255),
+          rgb(255, 0, 212),
           cyan
         );
       }
       /* * {
         border: 1px solid black;
       } */
-      .gray {
-        background-color: rgba(200, 200, 200, 0.5);
-      }
       .flex {
         display: flex;
       }
@@ -34,47 +34,39 @@
         flex-direction: column;
       }
       .box {
-        height: 200px;
         width: 450px;
+        height: 200px;
         border-radius: 20px;
-        box-shadow: 10px 10px 5px #888888;
-        line-height: 2;
-      }
-      .mr20 {
-        margin-right: 20px;
-      }
-      .mt20 {
-        margin-top: 20px;
+        box-shadow: 10px 10px 5px rgb(153, 153, 153);
       }
       .center {
         justify-content: center;
         align-items: center;
       }
-      .bodyctr::-webkit-scrollbar {
+      .mt20 {
+        margin-top: 20px;
+      }
+      .mr20 {
+        margin-right: 20px;
+      }
+      .gray {
+        background-color: rgba(190, 190, 190, 0.5);
+      }
+      .none::-webkit-scrollbar {
         display: none;
       }
       .img {
         border-radius: 20px;
       }
       @media (max-width: 600px) {
-        .box {
-          width: 300px;
-        }
         .container {
           flex-direction: column;
         }
+        .box {
+          width: 300px;
+        }
         .mtop {
-          margin-top: 1150px;
-        }
-        .ctrhd {
-          position: fixed;
-        }
-        body {
-          background-image: linear-gradient(
-            to bottom right,
-            rgb(247, 0, 255),
-            cyan
-          );
+          margin-top: 750px;
         }
       }
     </style>
@@ -83,12 +75,12 @@
     <!-- headctr -->
     <div
       style="
-        width: 100%;
         height: 120px;
-        z-index: 1;
-        box-shadow: 10px 10px 5px #888888;
+        width: 100%;
+        line-height: 30px;
+        box-shadow: 10px 10px 5px rgb(153, 153, 153);
       "
-      class="gray flex center column ctrhd"
+      class="gray flex center column"
     >
       <img
         src="https://i.ibb.co/h14pYQgp/logo09.webp"
@@ -96,14 +88,13 @@
         height="75px"
         width="75px"
         style="border-radius: 100%"
-        loading="eager"
       />
       <a href="https://zheng-08.github.io">My Profile</a>
     </div>
     <!-- bodyctr -->
-    <div style="flex: 1; overflow: auto" class="flex center bodyctr ctrbdy">
+    <div style="flex: 1; overflow: auto" class="flex center none">
       <!-- container -->
-      <div style="margin-top: 130px" class="flex container">
+      <div class="flex container" style="margin-top: 150px; padding: 20px">
         <!-- left -->
         <div class="flex column mr20">
           <!-- box -->
