@@ -102,6 +102,9 @@
       .img {
         border-radius: 20px;
       }
+      .anNiu {
+        display: none;
+      }
       @media (max-width: 600px) {
         .ceBianLan {
           display: none;
@@ -118,6 +121,10 @@
         }
         .shuJuKuai {
           width: 300px;
+        }
+        .anNiu {
+          display: flex;
+          margin-top: 20px;
         }
       }
     </style>
@@ -282,10 +289,18 @@
               </a>
               <a href="https://www.midorg.com/vsc.html">编程工具下载</a>
             </div>
+            <!-- 按钮 -->
+            <div class="anNiu">
+              <button onclick="showPage1()">编程工具</button>
+              <button style="margin-left: 10px" onclick="showPage2()">
+                作业工具
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- 主区域二 -->
     <div id="page2" class="zhuQuYu hidden">
       <!-- 头部栏 -->
@@ -425,6 +440,12 @@
               </a>
               <a href="https://www.wolframalpha.com/">数学高级计算</a>
             </div>
+            <!-- 按钮 -->
+            <div class="anNiu">
+              <button onclick="showPage1()">编程工具</button>
+              <button style="margin-left: 10px" onclick="showPage2()">
+                作业工具
+              </button>
           </div>
         </div>
       </div>
