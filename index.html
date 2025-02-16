@@ -1,209 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tools 3.1</title>
-    <link rel="Shortcut Icon" href="https://i.ibb.co/h14pYQgp/logo09.webp" />
     <meta
       name="description"
-      content="touxiang yuandao csdn imgbb kangwenchang chatgpt deepseek"
+      content="这是一个工具网站，提供各种编程和作业工具。"
     />
-    <meta name="keywords" content="tools3.1 工具" />
-    <meta name="author" content="anfeng" />
+    <meta
+      name="keywords"
+      content="工具, 编程, 作业, 在线工具, 编程工具, 作业工具"
+    />
+    <meta name="author" content="安疯" />
+    <meta name="robots" content="index, follow" />
+    <title>工具5.0</title>
+    <link rel="Shortcut Icon" href="https://i.ibb.co/h14pYQgp/logo09.webp" />
     <style>
       body {
         margin: 0;
         height: 100vh;
-        background-image: linear-gradient(
-          to bottom right,
-          rgb(255, 0, 255),
-          cyan
-        );
-      }
-      .gray {
-        background-color: rgba(200, 200, 200, 0.5);
+        background-color: #eee;
+        display: flex;
       }
       /* * {
         border: 1px solid black;
       } */
-      .flex {
-        display: flex;
+      .white {
+        background-color: white;
       }
-      .column {
+      .ceBianLan {
+        width: 200px;
+        z-index: 2;
+      }
+      .zhuQuYu {
+        flex: 1;
+        display: flex;
         flex-direction: column;
       }
-      .box {
-        height: 200px;
-        width: 450px;
-        border-radius: 30px;
-        box-shadow: 10px 10px 10px rgb(161, 161, 161);
+      .touBuLan {
+        height: 60px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
       }
-      .center {
+      .neiRongQu {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        padding: 20px;
+      }
+      .neiRongQu::-webkit-scrollbar {
+        display: none;
+      }
+      .shuJuQu {
+        display: flex;
+        margin-top: 350px;
+      }
+      .zuoCeQu {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+      }
+      .youCeQu {
+        display: flex;
+        flex-direction: column;
+      }
+      .shuJuKuai {
+        height: 200px;
+        width: 400px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-      .bodyctr::-webkit-scrollbar {
+      .mt20 {
+        margin-top: 20px;
+      }
+      .yinYing {
+        box-shadow: 10px 10px 5px #d4d4d4;
+      }
+      .hidden {
         display: none;
       }
-      .mr20 {
-        margin-right: 30px;
+      .touXiangLan {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #999;
       }
-      .mt20 {
-        margin-top: 30px;
+      .yeShu {
+        border-bottom: 1px solid rgb(190, 190, 190);
+        color: #666;
+        cursor: pointer;
       }
       .img {
         border-radius: 20px;
       }
-      @media screen and (max-width: 600px) {
-        .container {
+      @media (max-width: 600px) {
+        .ceBianLan {
+          display: none;
+        }
+        .shuJuQu {
           flex-direction: column;
+          margin-top: auto;
         }
-        .box {
-          width: 300px;
+        .youCeQu {
+          margin-top: 20px;
         }
-        .right {
-          margin-top: 30px;
-        }
-        .headctr {
-          position: fixed;
-        }
-        .mtop {
-          margin-top: 550px;
-        }
-        .left {
+        .zuoCeQu {
           margin-right: 0;
         }
-      }
-      @media (max-height: 800px) and (max-width: 600px) {
-        .mtop {
-          margin-top: 800px;
+        .shuJuKuai {
+          width: 300px;
         }
       }
     </style>
   </head>
-  <body class="flex column">
-    <!-- headctr -->
-    <div
-      style="
-        height: 120px;
-        width: 100%;
-        box-shadow: 10px 10px 10px rgb(161, 161, 161);
-      "
-      class="gray flex center column headctr"
-    >
-      <img
-        src="https://i.ibb.co/h14pYQgp/logo09.webp"
-        alt="touxiang"
-        height="70px"
-        width="70px"
-        style="border-radius: 100%"
-        loading="eager"
-      />
-      <a href="https://zheng-08.github.io">My Profile</a>
+  <body>
+    <!-- 侧边栏 -->
+    <div class="ceBianLan white yinYing">
+      <!-- 头像栏 -->
+      <div class="touXiangLan">
+        <a href="https://zheng-08.github.io">
+          <img
+            src="https://i.ibb.co/h14pYQgp/logo09.webp"
+            alt="头像"
+            height="40px"
+            width="40px"
+            style="border-radius: 30%"
+            loading="eager"
+          />
+        </a>
+        <a href="https://zheng-08.github.io" style="margin-left: 10px">安疯</a>
+      </div>
+      <!-- 第一页 -->
+      <div class="yeShu" onclick="showPage1()">
+        <p>点击这里前往编程工具</p>
+      </div>
+      <!-- 第二页 -->
+      <div class="yeShu" onclick="showPage2()">
+        <p>点击这里前往作业工具</p>
+      </div>
     </div>
-    <!-- bodyctr -->
-    <div style="flex: 1; overflow: auto" class="flex center bodyctr">
-      <!-- container -->
-      <div style="margin-top: 200px; padding: 20px" class="flex container">
-        <!-- left -->
-        <div class="flex column mr20 left">
-          <!-- box -->
-          <div class="box gray flex center column mtop">
-            <a href="https://www.midorg.com/h.html">
-              <img
-                src="https://www.midorg.com/midlogo.png"
-                alt="yuandao"
-                height="80px"
-                width="80px"
-                class="img"
-                loading="lazy"
-              />
-            </a>
-            <a href="https://www.midorg.com/h.html">元岛在线编辑html</a>
+    <!-- 主区域 -->
+    <div id="page1" class="zhuQuYu">
+      <!-- 头部栏 -->
+      <div class="touBuLan white yinYing">
+        <h1>编程工具</h1>
+      </div>
+      <!-- 内容区 -->
+      <div class="neiRongQu">
+        <!-- 数据区 -->
+        <div class="shuJuQu">
+          <!-- 左侧区 -->
+          <div class="zuoCeQu">
+            <!-- 数据块 -->
+            <div class="shuJuKuai white yinYing">
+              <a href="https://www.midorg.com/h.html">
+                <img
+                  src="https://www.midorg.com/midlogo.png"
+                  alt="yuandao"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://www.midorg.com/h.html">元岛在线编辑html</a>
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a
+                href="https://blog.csdn.net/qq_20042935/article/details/133920722"
+              >
+                <img
+                  src="https://th.bing.com/th/id/OIP.fNgrFfOsWOzxSEyNO0G6YQAAAA?rs=1&pid=ImgDetMain"
+                  alt="csdn"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://blog.csdn.net/qq_20042935/article/details/133920722"
+                >教你如何使用github部署网站</a
+              >
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a href="https://imgbb.com/">
+                <img
+                  src="https://th.bing.com/th/id/OIP.IGGuJMtm4JbMBpom8MGCKgAAAA?w=167&h=180&c=7&r=0&o=5&pid=1.7"
+                  alt="imgbb"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://imgbb.com/">图片链接生成</a>
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a href="https://chat.qwenlm.ai/">
+                <img
+                  src="https://aiimg.youla.cloud/assistant/logo/qianwen.png"
+                  alt="qwen"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://chat.qwenlm.ai/">Qwen</a>
+            </div>
           </div>
-          <!-- box -->
-          <div class="box gray mt20 flex center column">
-            <a
-              href="https://blog.csdn.net/qq_20042935/article/details/133920722"
-            >
-              <img
-                src="https://th.bing.com/th/id/OIP.fNgrFfOsWOzxSEyNO0G6YQAAAA?rs=1&pid=ImgDetMain"
-                alt="csdn"
-                height="80px"
-                width="80px"
-                class="img"
-                loading="lazy"
-              />
-            </a>
-            <a
-              href="https://blog.csdn.net/qq_20042935/article/details/133920722"
-              >教你如何使用github部署网站</a
-            >
-          </div>
-          <!-- box -->
-          <div class="box gray mt20 flex center column">
-            <a href="https://imgbb.com/">
-              <img
-                src="https://th.bing.com/th/id/OIP.IGGuJMtm4JbMBpom8MGCKgAAAA?w=167&h=180&c=7&r=0&o=5&pid=1.7"
-                alt="imgbb"
-                height="80px"
-                width="80px"
-                class="img"
-                loading="lazy"
-              />
-            </a>
-            <a href="https://imgbb.com/">图片链接生成</a>
-          </div>
-        </div>
-        <!-- right -->
-        <div class="flex column right">
-          <!-- box -->
-          <div class="box gray flex center column">
-            <a href="https://space.bilibili.com/34786453/upload/video">
-              <img
-                src="https://th.bing.com/th/id/OIP._wP51FDldNI8alN4y01I1AHaHa?rs=1&pid=ImgDetMain"
-                alt="kangwenchang"
-                height="80px"
-                width="80px"
-                class="img"
-                loading="lazy"
-              />
-            </a>
-            <a href="https://space.bilibili.com/34786453/upload/video"
-              >康文昌教学视频</a
-            >
-          </div>
-          <!-- box -->
-          <div class="box gray mt20 flex center column">
-            <a href="https://chatgpt.com/">
-              <img
-                src="https://thumbs.dreamstime.com/b/minsk-belarus-openai-chatgpt-logo-artifical-chatbot-system-chat-bot-button-web-app-phone-icon-symbol-editorial-vector-275376231.jpg?w=768"
-                alt="chatgpt"
-                height="80px"
-                width="80px"
-                class="img"
-                loading="lazy"
-              />
-            </a>
-            <a href="https://chatgpt.com/">ChatGPT</a>
-          </div>
-          <!-- box -->
-          <div class="box gray mt20 flex center column">
-            <a href="https://chat.deepseek.com/">
-              <img
-                src="https://th.bing.com/th?id=OIF.XksJ2KBDIu%2f0QqnPjuqFEA&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
-                alt="deepseek"
-                height="80px"
-                width="80px"
-                class="img"
-                loading="lazy"
-              />
-            </a>
-            <a href="https://chat.deepseek.com/">DeepSeek</a>
+          <!-- 右侧区 -->
+          <div class="youCeQu">
+            <!-- 数据块 -->
+            <div class="shuJuKuai white yinYing">
+              <a href="https://space.bilibili.com/34786453/upload/video">
+                <img
+                  src="https://th.bing.com/th/id/OIP._wP51FDldNI8alN4y01I1AHaHa?rs=1&pid=ImgDetMain"
+                  alt="kangwenchang"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://space.bilibili.com/34786453/upload/video"
+                >康文昌编程教学视频</a
+              >
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a href="https://chatgpt.com/">
+                <img
+                  src="https://thumbs.dreamstime.com/b/minsk-belarus-openai-chatgpt-logo-artifical-chatbot-system-chat-bot-button-web-app-phone-icon-symbol-editorial-vector-275376231.jpg?w=768"
+                  alt="chatgpt"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://chatgpt.com/">ChatGPT</a>
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a href="https://chat.deepseek.com/">
+                <img
+                  src="https://th.bing.com/th?id=OIF.XksJ2KBDIu%2f0QqnPjuqFEA&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                  alt="deepseek"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://chat.deepseek.com/">DeepSeek</a>
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a href="https://www.midorg.com/vsc.html">
+                <img
+                  src="https://www.midorg.com/midlogo.png"
+                  alt="deepseek"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://www.midorg.com/vsc.html">编程工具下载</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- 主区域二 -->
+    <div id="page2" class="zhuQuYu hidden">
+      <!-- 头部栏 -->
+      <div class="touBuLan white yinYing">
+        <h1>作业工具</h1>
+      </div>
+      <!-- 内容区 -->
+      <div class="neiRongQu">
+        <!-- 数据区 -->
+        <div class="shuJuQu">
+          <!-- 左侧区 -->
+          <div class="zuoCeQu">
+            <!-- 数据块 -->
+            <div class="shuJuKuai white yinYing">
+              <a
+                href="https://flipbook.sasbadisb.com/storage_books/2023-12-06-6570155653ec24.55820623/mobile/index.html"
+              >
+                <img
+                  src="https://th.bing.com/th/id/OIP.DikDEQuuni6nwZLo8WzgzQAAAA?w=184&h=245&c=7&r=0&o=5&pid=1.7"
+                  alt="sejarah作业"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://flipbook.sasbadisb.com/storage_books/2023-12-06-6570155653ec24.55820623/mobile/index.html"
+                >sejarah作业答案在最后一面</a
+              >
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a href="https://chatgpt.com/">
+                <img
+                  src="https://thumbs.dreamstime.com/b/minsk-belarus-openai-chatgpt-logo-artifical-chatbot-system-chat-bot-button-web-app-phone-icon-symbol-editorial-vector-275376231.jpg?w=768"
+                  alt="chatgpt"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://chatgpt.com/">ChatGPT</a>
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a href="https://www.ekamus.info/">
+                <img
+                  src="https://th.bing.com/th/id/OIP.7O1KbiA12Q81z31I5HwrUwAAAA?w=141&h=150&c=7&r=0&o=5&pid=1.7"
+                  alt="马来文字典"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://www.ekamus.info/">马来文谚语和文字</a>
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a href="https://chat.qwenlm.ai/">
+                <img
+                  src="https://aiimg.youla.cloud/assistant/logo/qianwen.png"
+                  alt="qwen"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://chat.qwenlm.ai/">Qwen</a>
+            </div>
+          </div>
+          <!-- 右侧区 -->
+          <div class="youCeQu">
+            <!-- 数据块 -->
+            <div class="shuJuKuai white yinYing">
+              <a href="https://anyflip.com/nnszl/yxfy/basic">
+                <img
+                  src="https://online.anyflip.com/nnszl/yxfy/files/shot.jpg"
+                  alt="国文作业"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://anyflip.com/nnszl/yxfy/basic"
+                >Modul A+ SPM Ting 4 BM 答案在最后一面</a
+              >
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a href="https://chat.deepseek.com/">
+                <img
+                  src="https://th.bing.com/th?id=OIF.XksJ2KBDIu%2f0QqnPjuqFEA&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                  alt="deepseek"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://chat.deepseek.com/">DeepSeek</a>
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a
+                href="https://dictionary.cambridge.org/dictionary/english-chinese-simplified/"
+              >
+                <img
+                  src="https://th.bing.com/th/id/OIP.7OjqX3pfJ0w8m1fRwh7cxAHaHa?w=156&h=180&c=7&r=0&o=5&pid=1.7"
+                  alt="英文字典"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://dictionary.cambridge.org/dictionary/english-chinese-simplified/"
+                >英文字典</a
+              >
+            </div>
+            <!-- 数据块 -->
+            <div class="shuJuKuai white mt20 yinYing">
+              <a href="https://www.wolframalpha.com/">
+                <img
+                  src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/46/b7/2d/46b72d1f-29f4-77a0-b86b-6f1dc7780b42/source/512x512bb.jpg"
+                  alt="wolframalpha"
+                  height="80px"
+                  width="80px"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://www.wolframalpha.com/">数学高级计算</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showPage1() {
+        document.getElementById("page1").classList.remove("hidden");
+        document.getElementById("page2").classList.add("hidden");
+      }
+      function showPage2() {
+        document.getElementById("page2").classList.remove("hidden");
+        document.getElementById("page1").classList.add("hidden");
+      }
+    </script>
   </body>
 </html>
