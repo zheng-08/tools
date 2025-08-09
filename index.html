@@ -3,454 +3,459 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="这是一个工具网站，提供各种编程和作业工具。"
+    <meta name="description" content="这是一个推荐网站的页面。" />
+    <meta name="keywords" content="推荐, 网站, 工具, 学习" />
+    <meta name="author" content="暗" />
+    <link
+      rel="icon"
+      href="https://i.ibb.co/h14pYQgp/logo09.webp"
+      type="image/webp"
     />
-    <meta
-      name="keywords"
-      content="工具, 编程, 作业, 在线工具, 编程工具, 作业工具"
-    />
-    <meta name="author" content="安疯" />
-    <meta name="robots" content="index, follow" />
-    <title>工具5.0</title>
-    <link rel="Shortcut Icon" href="https://i.ibb.co/h14pYQgp/logo09.webp" />
+    <title>推荐网站</title>
     <style>
       body {
         margin: 0;
         height: 100vh;
         background-color: #eee;
         display: flex;
+        flex-direction: column;
+        font-family: 'Microsoft YaHei', '宋体', Arial, sans-serif;
       }
       /* * {
         border: 1px solid black;
       } */
-      .white {
+      .baiSe {
         background-color: white;
       }
-      .ceBianLan {
-        width: 200px;
+      .touBuLan {
+        width: 100%;
+        height: 80px;
+        display: flex;
         z-index: 2;
+        justify-content: space-between;
       }
       .zhuQuYu {
         flex: 1;
         display: flex;
-        flex-direction: column;
+        overflow: auto;
       }
-      .touBuLan {
-        height: 60px;
+      .ceBianLan {
+        width: 250px;
         z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 5px;
       }
       .neiRongQu {
         flex: 1;
         display: flex;
+        overflow: auto;
         justify-content: center;
         align-items: center;
-        overflow: auto;
-        padding: 20px;
+        padding: 30px;
       }
-      .neiRongQu::-webkit-scrollbar {
+      .hidden {
         display: none;
       }
       .shuJuQu {
         display: flex;
         margin-top: auto;
       }
-      .zuoCeQu {
+      .zuoCe {
         display: flex;
         flex-direction: column;
-        margin-right: 20px;
       }
-      .youCeQu {
+      .youCe {
         display: flex;
         flex-direction: column;
       }
       .shuJuKuai {
         height: 200px;
         width: 400px;
-        border-radius: 30px;
+        border-radius: 20px;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+      }
+      .mr20 {
+        margin-right: 20px;
       }
       .mt20 {
         margin-top: 20px;
       }
-      .yinYing {
-        box-shadow: 10px 10px 5px #d4d4d4;
-      }
-      .hidden {
+      ::-webkit-scrollbar {
         display: none;
       }
-      .touXiangLan {
+      .yinYing {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      }
+      .lieBiao {
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid rgb(194, 194, 194);
         display: flex;
-        padding: 10px;
         justify-content: center;
         align-items: center;
-        border-bottom: 1px solid #999;
       }
-      .yeShu {
-        border-bottom: 1px solid rgb(190, 190, 190);
-        color: #666;
+      p {
+        font-family: 宋体;
+      }
+      h1 {
+        font-family: 宋体;
+      }
+      a {
+        font-family: 宋体;
+        text-decoration: none;
+      }
+      .lieBio-p {
+        font-size: 18px;
+        color: #a3a3a3;
         cursor: pointer;
       }
       .img {
+        width: 100px;
+        height: 100px;
         border-radius: 20px;
       }
-      .anNiu {
-        display: none;
+      .ziTi {
+        font-family: 宋体;
+        color: black;
+        font-size: 20px;
       }
-      @media (max-width: 600px) {
+      .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .GRJJ {
+        background-color: blue;
+        width: 130px;
+        height: 100%;
+      }
+      .biaoTi-h1 {
+        font-size: 50px;
+      }
+      .geRenJianJie-a {
+        font-size: 13px;
+        color: white;
+      }
+      .anNiu-div {
+        height: 100%;
+        width: 80px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .touXiang {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        margin-left: 10px;
+      }
+      @media screen and (max-width: 800px) {
         .ceBianLan {
           display: none;
         }
         .shuJuQu {
           flex-direction: column;
-          margin-top: auto;
         }
-        .youCeQu {
+        .youCe {
           margin-top: 20px;
         }
-        .zuoCeQu {
-          margin-right: 0;
+        .biaoTi-h1 {
+          font-size: 20px;
+        }
+        .geRenJianJie-a {
+          font-size: 10px;
         }
         .shuJuKuai {
           width: 300px;
         }
+        .img {
+          width: 80px;
+          height: 80px;
+        }
+        .biaoTi {
+          display: none;
+        }
         .anNiu {
           display: flex;
-          margin-top: 20px;
+        }
+        .touXiang {
+          width: 40px;
+          height: 40px;
+        }
+        .GRJJ {
+          width: 90px;
+          height: 100%;
+        }
+        .ziTi {
+          font-size: 15px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .ceBianLan {
+          display: none;
+        }
+        .biaoTi-h1 {
+          font-size: 16px;
+        }
+        .img {
+          width: 60px;
+          height: 60px;
+        }
+        .shuJuKuai {
+          width: 250px;
         }
       }
     </style>
   </head>
   <body>
-    <!-- 侧边栏 -->
-    <div class="ceBianLan white yinYing">
-      <!-- 头像栏 -->
-      <div class="touXiangLan">
-        <a href="https://zheng-08.github.io">
-          <img
-            src="https://i.ibb.co/h14pYQgp/logo09.webp"
-            alt="头像"
-            height="40px"
-            width="40px"
-            style="border-radius: 30%"
-            loading="eager"
-          />
-        </a>
-        <a href="https://zheng-08.github.io" style="margin-left: 10px">安疯</a>
+    <!-- touBuLan -->
+    <div class="touBuLan baiSe yinYing">
+      <!-- touXiang -->
+      <div class="flex">
+        <img
+          src="https://i.ibb.co/h14pYQgp/logo09.webp"
+          alt="my logo"
+          class="touXiang"
+        />
       </div>
-      <!-- 第一页 -->
-      <div class="yeShu" onclick="showPage1()">
-        <p>点击这里前往编程工具</p>
+      <!-- biaoTi -->
+      <div class="flex biaoTi">
+        <h1 class="biaoTi-h1">点击图片跳转到该网站</h1>
       </div>
-      <!-- 第二页 -->
-      <div class="yeShu" onclick="showPage2()">
-        <p>点击这里前往作业工具</p>
+      <!-- 按钮 -->
+      <div class="hidden anNiu">
+        <div
+          style="border-right: 1px solid white"
+          class="anNiu-div"
+          onclick="showPage1()"
+        >
+          <p style="color: white">编辑推荐</p>
+        </div>
+        <div class="anNiu-div" onclick="showPage2()">
+          <p style="color: white">学习推荐</p>
+        </div>
+      </div>
+      <!-- geRenJianJie -->
+      <div class="flex GRJJ">
+        <a href="https://zheng-08.github.io" class="geRenJianJie-a"
+          ><h1>个人简介</h1></a
+        >
       </div>
     </div>
-    <!-- 主区域 -->
-    <div id="page1" class="zhuQuYu">
-      <!-- 头部栏 -->
-      <div class="touBuLan white yinYing">
-        <h1>编程工具</h1>
+    <!-- zhuQuYu -->
+    <div class="zhuQuYu">
+      <!-- ceBianLan -->
+      <div class="ceBianLan baiSe yinYing">
+        <!-- lieBiao -->
+        <div class="lieBiao" onclick="showPage1()">
+          <p class="lieBio-p">点击这里前往编程推荐网站</p>
+        </div>
+        <div class="lieBiao" onclick="showPage2()">
+          <p class="lieBio-p">点击这里前往学习推荐网站</p>
+        </div>
       </div>
-      <!-- 内容区 -->
-      <div class="neiRongQu">
-        <!-- 数据区 -->
+      <!-- neiRongQu -->
+      <!-- page1 -->
+      <div class="neiRongQu" id="page1">
+        <!-- anNiu -->
         <div class="shuJuQu">
-          <!-- 左侧区 -->
-          <div class="zuoCeQu">
-            <!-- 数据块 -->
-            <div class="shuJuKuai white yinYing">
+          <!-- zuoCe -->
+          <div class="zuoCe mr20">
+            <!-- shuJuKuai -->
+            <div class="shuJuKuai baiSe yinYing">
               <a href="https://www.midorg.com/h.html">
                 <img
                   src="https://www.midorg.com/midlogo.png"
-                  alt="yuandao"
-                  height="80px"
-                  width="80px"
+                  alt="img1"
                   class="img"
                   loading="lazy"
                 />
               </a>
-              <a href="https://www.midorg.com/h.html">元岛在线编辑html</a>
+              <a href="https://www.midorg.com/h.html" class="ziTi">
+                元岛在线编辑html
+              </a>
             </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
+            <div class="shuJuKuai baiSe yinYing mt20">
+              <a href="https://cloudstudio.net/">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1c0abTCtAesRPMdERvIOaUbJB3N6Hg2Mx3w&s"
+                  alt="img2"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://cloudstudio.net/" class="ziTi">
+                云端在线编辑器
+              </a>
+            </div>
+            <div class="shuJuKuai baiSe yinYing mt20">
+              <a href="https://imgbb.com/">
+                <img
+                  src="https://th.bing.com/th/id/OIP.IGGuJMtm4JbMBpom8MGCKgAAAA?w=167&h=180&c=7&r=0&o=5&pid=1.7"
+                  alt="img3"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://imgbb.com/" class="ziTi"> 图片链接生成 </a>
+            </div>
+            <div class="shuJuKuai baiSe yinYing mt20">
+              <a href="https://www.midorg.com/vsc.html">
+                <img
+                  src="https://www.midorg.com/midlogo.png"
+                  alt="img4"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://www.midorg.com/vsc.html" class="ziTi"
+                >编程工具下载</a
+              >
+            </div>
+          </div>
+          <!-- youCe -->
+          <div class="youCe">
+            <!-- shuJuKuai -->
+            <div class="shuJuKuai baiSe yinYing">
               <a
                 href="https://blog.csdn.net/qq_20042935/article/details/133920722"
               >
                 <img
                   src="https://th.bing.com/th/id/OIP.fNgrFfOsWOzxSEyNO0G6YQAAAA?rs=1&pid=ImgDetMain"
-                  alt="csdn"
-                  height="80px"
-                  width="80px"
+                  alt="img5"
                   class="img"
                   loading="lazy"
                 />
               </a>
               <a
                 href="https://blog.csdn.net/qq_20042935/article/details/133920722"
-                >教你如何使用github部署网站</a
+                class="ziTi"
+                >部署网站教学</a
               >
             </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
-              <a href="https://imgbb.com/">
+            <div class="shuJuKuai baiSe yinYing mt20">
+              <a href="https://chatgpt.com/">
                 <img
-                  src="https://th.bing.com/th/id/OIP.IGGuJMtm4JbMBpom8MGCKgAAAA?w=167&h=180&c=7&r=0&o=5&pid=1.7"
-                  alt="imgbb"
-                  height="80px"
-                  width="80px"
+                  src="https://thumbs.dreamstime.com/b/minsk-belarus-openai-chatgpt-logo-artifical-chatbot-system-chat-bot-button-web-app-phone-icon-symbol-editorial-vector-275376231.jpg?w=768"
+                  alt="img6"
                   class="img"
                   loading="lazy"
                 />
               </a>
-              <a href="https://imgbb.com/">图片链接生成</a>
+              <a href="https://chatgpt.com/" class="ziTi"> ChatGPT </a>
             </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
-              <a href="https://chat.qwenlm.ai/">
+            <div class="shuJuKuai baiSe yinYing mt20">
+              <a href="https://chat.deepseek.com/">
                 <img
-                  src="https://aiimg.youla.cloud/assistant/logo/qianwen.png"
-                  alt="qwen"
-                  height="80px"
-                  width="80px"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ05mr8h3qmCTeqLGLVB3LRKfOQhTmk1l_2Iw&s "
+                  alt="img7"
                   class="img"
                   loading="lazy"
                 />
               </a>
-              <a href="https://chat.qwenlm.ai/">Qwen</a>
+              <a href="https://chat.deepseek.com/" class="ziTi"> DeepSeek </a>
             </div>
-          </div>
-          <!-- 右侧区 -->
-          <div class="youCeQu">
-            <!-- 数据块 -->
-            <div class="shuJuKuai white yinYing">
+            <div class="shuJuKuai baiSe yinYing mt20">
               <a href="https://space.bilibili.com/34786453/upload/video">
                 <img
                   src="https://th.bing.com/th/id/OIP._wP51FDldNI8alN4y01I1AHaHa?rs=1&pid=ImgDetMain"
-                  alt="kangwenchang"
-                  height="80px"
-                  width="80px"
+                  alt="img8"
                   class="img"
                   loading="lazy"
                 />
               </a>
-              <a href="https://space.bilibili.com/34786453/upload/video"
-                >康文昌编程教学视频</a
+              <a
+                href="https://space.bilibili.com/34786453/upload/video"
+                class="ziTi"
               >
-            </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
-              <a href="https://chatgpt.com/">
-                <img
-                  src="https://thumbs.dreamstime.com/b/minsk-belarus-openai-chatgpt-logo-artifical-chatbot-system-chat-bot-button-web-app-phone-icon-symbol-editorial-vector-275376231.jpg?w=768"
-                  alt="chatgpt"
-                  height="80px"
-                  width="80px"
-                  class="img"
-                  loading="lazy"
-                />
+                编程教学
               </a>
-              <a href="https://chatgpt.com/">ChatGPT</a>
-            </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
-              <a href="https://chat.deepseek.com/">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ05mr8h3qmCTeqLGLVB3LRKfOQhTmk1l_2Iw&s"
-                  alt="deepseek"
-                  height="80px"
-                  width="80px"
-                  class="img"
-                  loading="lazy"
-                />
-              </a>
-              <a href="https://chat.deepseek.com/">DeepSeek</a>
-            </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
-              <a href="https://www.midorg.com/vsc.html">
-                <img
-                  src="https://www.midorg.com/midlogo.png"
-                  alt="deepseek"
-                  height="80px"
-                  width="80px"
-                  class="img"
-                  loading="lazy"
-                />
-              </a>
-              <a href="https://www.midorg.com/vsc.html">编程工具下载</a>
-            </div>
-            <!-- 按钮 -->
-            <div class="anNiu">
-              <button onclick="showPage1()">编程工具</button>
-              <button style="margin-left: 10px" onclick="showPage2()">
-                作业工具
-              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- 主区域二 -->
-    <div id="page2" class="zhuQuYu hidden">
-      <!-- 头部栏 -->
-      <div class="touBuLan white yinYing">
-        <h1>作业工具</h1>
-      </div>
-      <!-- 内容区 -->
-      <div class="neiRongQu">
-        <!-- 数据区 -->
+      <!-- page2 -->
+      <div class="neiRongQu hidden" id="page2">
         <div class="shuJuQu">
-          <!-- 左侧区 -->
-          <div class="zuoCeQu">
-            <!-- 数据块 -->
-            <div class="shuJuKuai white yinYing">
+          <!-- zuoCe -->
+          <div class="zuoCe mr20">
+            <!-- shuJuKuai -->
+            <div class="shuJuKuai baiSe yinYing">
               <a
-                href="https://www.asksia.ai/super"
+                href="https://dictionary.cambridge.org/dictionary/english-chinese-simplified/"
               >
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt="img9"
+                  class="img"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://dictionary.cambridge.org/dictionary/english-chinese-simplified/"
+                class="ziTi"
+              >
+                在线英语字典
+              </a>
+            </div>
+            <div class="shuJuKuai baiSe yinYing mt20">
+              <a href="https://www.asksia.ai/super">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS101UB4L6hhB9Xh0NJKOU2UfQQxTxD3GLjmWlg7OgEoTTOWzPa7sZy5kzlNM7PU-jYFYg&usqp=CAU"
-                  alt="sejarah作业"
-                  height="80px"
-                  width="80px"
+                  alt="img10"
                   class="img"
                   loading="lazy"
                 />
               </a>
-              <a
-                href="https://www.asksia.ai/super"
-                >asksia ai</a
-              >
+              <a href="https://www.asksia.ai/super" class="ziTi"> asksia ai </a>
             </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
-              <a href="https://chatgpt.com/">
-                <img
-                  src="https://thumbs.dreamstime.com/b/minsk-belarus-openai-chatgpt-logo-artifical-chatbot-system-chat-bot-button-web-app-phone-icon-symbol-editorial-vector-275376231.jpg?w=768"
-                  alt="chatgpt"
-                  height="80px"
-                  width="80px"
-                  class="img"
-                  loading="lazy"
-                />
-              </a>
-              <a href="https://chatgpt.com/">ChatGPT</a>
-            </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
+            <div class="shuJuKuai baiSe yinYing mt20">
               <a href="https://www.ekamus.info/">
                 <img
                   src="https://th.bing.com/th/id/OIP.7O1KbiA12Q81z31I5HwrUwAAAA?w=141&h=150&c=7&r=0&o=5&pid=1.7"
-                  alt="马来文字典"
-                  height="80px"
-                  width="80px"
+                  alt="img11"
                   class="img"
                   loading="lazy"
                 />
               </a>
-              <a href="https://www.ekamus.info/">马来文谚语和文字</a>
-            </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
-              <a href="https://chat.qwenlm.ai/">
-                <img
-                  src="https://aiimg.youla.cloud/assistant/logo/qianwen.png"
-                  alt="qwen"
-                  height="80px"
-                  width="80px"
-                  class="img"
-                  loading="lazy"
-                />
+              <a href="https://www.ekamus.info/" class="ziTi">
+                在线马来文字典
               </a>
-              <a href="https://chat.qwenlm.ai/">Qwen</a>
             </div>
           </div>
-          <!-- 右侧区 -->
-          <div class="youCeQu">
-            <!-- 数据块 -->
-            <div class="shuJuKuai white yinYing">
-              <a href="https://www.memo.cards/dashboard">
+          <!-- youCe -->
+          <div class="youCe">
+            <!-- shuJuKuai -->
+            <div class="shuJuKuai baiSe yinYing">
+              <a href="https://zd.hwxnet.com/">
                 <img
-                  src="https://www.memo.cards/_next/image?url=%2Fassets%2Fimages%2Fmemo-logo.webp&w=640&q=75&dpl=dpl_9QBeFJ6QEXeHX4BKJF6wnvp1LJfR"
-                  alt="国文作业"
-                  height="80px"
-                  width="80px"
+                  src="data:image/jpeg;base64,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"
+                  alt="img13"
                   class="img"
                   loading="lazy"
                 />
               </a>
-              <a href="https://www.memo.cards/dashboard"
-                >memo ai(学习用)</a
-              >
+              <a href="https://zd.hwxnet.com/" class="ziTi">汉文字典</a>
             </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
-              <a href="https://chat.deepseek.com/">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ05mr8h3qmCTeqLGLVB3LRKfOQhTmk1l_2Iw&s"
-                  alt="deepseek"
-                  height="80px"
-                  width="80px"
-                  class="img"
-                  loading="lazy"
-                />
-              </a>
-              <a href="https://chat.deepseek.com/">DeepSeek</a>
-            </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
-              <a
-                href="https://dictionary.cambridge.org/dictionary/english-chinese-simplified/"
-              >
-                <img
-                  src="https://th.bing.com/th/id/OIP.7OjqX3pfJ0w8m1fRwh7cxAHaHa?w=156&h=180&c=7&r=0&o=5&pid=1.7"
-                  alt="英文字典"
-                  height="80px"
-                  width="80px"
-                  class="img"
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="https://dictionary.cambridge.org/dictionary/english-chinese-simplified/"
-                >英文字典</a
-              >
-            </div>
-            <!-- 数据块 -->
-            <div class="shuJuKuai white mt20 yinYing">
+            <div class="shuJuKuai baiSe yinYing mt20">
               <a href="https://www.wolframalpha.com/">
                 <img
                   src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/46/b7/2d/46b72d1f-29f4-77a0-b86b-6f1dc7780b42/source/512x512bb.jpg"
-                  alt="wolframalpha"
-                  height="80px"
-                  width="80px"
+                  alt="img12"
                   class="img"
                   loading="lazy"
                 />
               </a>
-              <a href="https://www.wolframalpha.com/">数学高级计算</a>
+              <a href="https://www.wolframalpha.com/" class="ziTi"
+                >在线数学计算</a
+              >
             </div>
-            <!-- 按钮 -->
-            <div class="anNiu">
-              <button onclick="showPage1()">编程工具</button>
-              <button style="margin-left: 10px" onclick="showPage2()">
-                作业工具
-              </button>
           </div>
         </div>
       </div>
     </div>
-
     <script>
       function showPage1() {
         document.getElementById("page1").classList.remove("hidden");
@@ -462,4 +467,7 @@
       }
     </script>
   </body>
+  <footer style="text-align:center; padding:20px; color:#888;">
+  © 2025 暗 | 推荐网站 | 点击图片
+</footer>
 </html>
